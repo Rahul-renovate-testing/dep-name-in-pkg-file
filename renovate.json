@@ -5,5 +5,13 @@
     "matchStrings": ["(?<currentValue>.*)"],
     "depNameTemplate": ["{{packageFile}}"],
     "datasourceTemplate": "npm"
-  }]
+  },
+  {
+    "customType": "regex",
+    "managerFilePatterns": ["/^also-packages\/.*\/service.env$/"],
+    "matchStrings": ["(?<currentValue>.*)"],
+    "depNameTemplate": ["{{packageFileDir}}"],
+    "datasourceTemplate": "npm"
+  }
+  ]
 }
