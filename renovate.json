@@ -3,7 +3,7 @@
     "customType": "regex",
     "managerFilePatterns": ["/^packages\/.*/"],
     "matchStrings": ["(?<currentValue>.*)"],
-    "depNameTemplate": ["{{#match packageFile \".*/([^/]+)$\"}}$1{{/match}}"],
+    "depNameTemplate": ["{{packageFile}}"],
     "datasourceTemplate": "npm"
   }]
 }
