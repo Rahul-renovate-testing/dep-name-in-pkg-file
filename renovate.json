@@ -3,14 +3,14 @@
     "customType": "regex",
     "managerFilePatterns": ["/^packages\/.*/"],
     "matchStrings": ["\\s*(?<currentValue>.+)\\s*$"],
-    "depNameTemplate": ["{{packageFile}}"],
+    "depNameTemplate": "{{packageFile}}",
     "datasourceTemplate": "npm"
   },
   {
     "customType": "regex",
     "managerFilePatterns": ["/^also-packages\/.*\/service.env$/"],
     "matchStrings": ["\\s*(?<currentValue>.+)\\s*$"],
-    "depNameTemplate": ["{{lookup (split packageFileDir '/') 1}}"],
+    "depNameTemplate": "{{lookup (split packageFileDir '/') 1}}",
     "datasourceTemplate": "npm"
   }
   ]
