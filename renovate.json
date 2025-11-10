@@ -10,7 +10,7 @@
     "customType": "regex",
     "managerFilePatterns": ["/^also-packages\/.*\/service.env$/"],
     "matchStrings": ["(?<currentValue>.*)"],
-    "depNameTemplate": ["{{packageFileDir}}"],
+    "depNameTemplate": ["{{lookup (split packageFileDir '/') 1}}"],
     "datasourceTemplate": "npm"
   }
   ]
