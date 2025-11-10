@@ -2,14 +2,14 @@
   "customManagers": [{
     "customType": "regex",
     "managerFilePatterns": ["/^packages\/.*/"],
-    "matchStrings": ["(?<currentValue>.*)"],
+    "matchStrings": ["\\s*(?<currentValue>.*)\\s*$"],
     "depNameTemplate": ["{{packageFile}}"],
     "datasourceTemplate": "npm"
   },
   {
     "customType": "regex",
     "managerFilePatterns": ["/^also-packages\/.*\/service.env$/"],
-    "matchStrings": ["(?<currentValue>.*)"],
+    "matchStrings": ["\\s*(?<currentValue>.*)\\s*$"],
     "depNameTemplate": ["{{lookup (split packageFileDir '/') 1}}"],
     "datasourceTemplate": "npm"
   }
